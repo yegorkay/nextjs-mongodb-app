@@ -11,7 +11,7 @@ handler.get(async (req, res) => {
   res.send({ user });
 });
 
-// dumb route, comment out middleware, get 200 in test
-// handler.get((req, res) => res.send(req.query.userId));
+// dumb route, comment out middleware and original route, get 200 in test
+handler.get((req, res) => res.send(req.query.userId));
 
 export default handler;
